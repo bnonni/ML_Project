@@ -15,7 +15,7 @@ from MCROC import *
 from AccuracyMetrics import *
 from Helpers import *
 
-def runRandomForest(X_train, y_train, X_test, y_test, labels):
+def runRandomForest(X_train, y_train, X_test, y_test):
     rfc = RandomForestClassifier()
     rfc.fit(X_train, y_train)
     rfc_pred = rfc.predict(X_test)
