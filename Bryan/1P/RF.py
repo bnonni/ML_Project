@@ -19,7 +19,7 @@ def runRandomForest(X_train, y_train, X_test, y_test):
     rfc = RandomForestClassifier()
     rfc.fit(X_train, y_train)
     rfc_pred = rfc.predict(X_test)
-    rf_keys, rf_vals, rf_labels = countUniqueValues(rf_pred)
+    rf_keys, rf_vals, rf_labels = countUniqueValues(rfc_pred)
     rfc_cm, rfc_cr, rfc_acc = getAccuracyMetrics(y_test, rfc_pred)
     print(f'Random Forest Accuracy Score: {rfc_acc}\n')
     print(f'Random Forest Confusion Matrix\n\n{rfc_cm}\n')
