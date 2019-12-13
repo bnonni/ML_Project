@@ -1,5 +1,6 @@
 #!/bin/bash
 
+./clean
 cp -r ~/Desktop/Github_Repos/Data/Python/Machine_Learning/Project/ ~/Desktop/ML_Project/
 cd ~/Desktop/ML_Project
 git add .

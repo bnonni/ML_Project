@@ -20,7 +20,6 @@ gc.collect()
 from AccuracyMetrics import *
 
 def testK(X_train, y_train):
-    # KNN to obtain optimal k for y_test1 values
     neighbors = np.arange(1,20)
     train_accuracy = np.empty(len(neighbors))
     for i,k in enumerate(neighbors):

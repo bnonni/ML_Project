@@ -21,7 +21,7 @@ def runRandomForest(X_train, y_train, X_test, y_test):
     rfc_pred = rfc.predict(X_test)
     rf_keys, rf_vals, rf_labels = countUniqueValues(rfc_pred)
     rfc_cm, rfc_cr, rfc_acc = getAccuracyMetrics(y_test, rfc_pred)
-    print(f'Random Forest Accuracy Score: {rfc_acc}\n')
+    print(f'\nRandom Forest Accuracy Score: {rfc_acc}\n')
     print(f'Random Forest Confusion Matrix\n\n{rfc_cm}\n')
     pd.crosstab(y_test, rfc_pred, rownames=['True'], colnames=['Predicted'], margins=True)
     print(f'\n\t\tRandom Forest Classification Report\n\n{rfc_cr}')
