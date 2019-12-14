@@ -28,7 +28,8 @@ def testK(X_train, y_train):
         train_accuracy[i] = knn_ytest.score(X_train, y_train)
     return neighbors, train_accuracy
 
-def plotTestK(neighbors, train_accuracy):
+def plotTestK(neighbors, train_accuracy, fs):
+    plt.figure(figsize=fs)
     plt.plot(neighbors, train_accuracy, label='Training Accuracy')
     plt.legend()
     plt.xlabel('Number of Neighbors')
